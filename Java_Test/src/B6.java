@@ -8,7 +8,7 @@ public class B6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
        int n=1;
-       while(n > 0){
+     endPro:  while(n > 0){
            System.out.println("Import email");
            String email = sc.nextLine();
            Pattern checkEmail = Pattern.compile("^[a-zA-Z0-9@. ]{6,}$");
@@ -26,11 +26,10 @@ public class B6 {
                }
             }else{
                System.out.println("Reset Input Email ");
-               break;
            }
            n++;
        }
-        System.out.println("End Program ");
+//        System.out.println("End Program ");
     }
 }
 
