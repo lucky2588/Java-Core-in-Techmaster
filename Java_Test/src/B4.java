@@ -12,30 +12,46 @@ public class B4 {
         if (N < 2) {
             System.out.println("KO phai SNT");
         } else {
+            System.out.println(" 10 numbers Prime of " + N + " the Frisrt is : ");
             for (int i = 2; i < N; i++) {
-                if (isPrimeNumber1(i)){
-                    Sum+=1;
-                    if(Sum <= 10){
-                        System.out.print("\t"+i);}
-                    if(i <10)
-                        System.out.print("\n"+i);
+                if (isPrimeNumber1(i)) {
+                    Sum += 1;
+                   if(Sum <= 10){
+                       System.out.println(i);
+                   }
                 }else{
                     continue;
                 }
             }
         }
+        //Lấy 10 STN :
+        if (N < 2) {
+            System.out.println("KO phai SNT");
+        } else {
+            System.out.println();
+            System.out.println("prime numbers less than 10");
+            for (int i = 2; i < N; i++) {
+                if (isPrimeNumber1(i)) {
+                    if (i < 10)
+                        System.out.print("\t" + i);
+                } else {
+                    continue;
+                }
+            }
+        }
     }
-        //Phương Thức Check Số Nguyên Tố
+
+    //Phương Thức Check Số Nguyên Tố
     public static boolean isPrimeNumber1(int n) {
         if (n < 2) {
             return false;
         }
-        int squareRoot = (int) Math.sqrt(n);
-        for (int i = 2; i <= squareRoot; i++) {
+        int checkNumbers = (int) Math.sqrt(n);
+        for (int i = 2; i <= checkNumbers; i++) {
             if (n % i == 0) {
                 return false;
             }
         }
         return true;
     }
-    }
+}
